@@ -2,9 +2,9 @@
 
 namespace Core.Common.Interfaces
 {
-    public interface IAsyncRepository<TEntity, TKey> where TEntity : class where TKey : struct , IBaseRepository<TEntity,TKey>
+    public interface IAsyncRepository<TEntity, TKey> : IAsyncBaseRepository<TEntity,TKey>
     {
-        Task Add(TEntity entity);
+        Task AddAsync(TEntity entity);
         Task Update(TEntity entity);
         Task Delete(TEntity entity);
         Task Delete(TKey key);
