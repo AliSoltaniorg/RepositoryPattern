@@ -7,6 +7,6 @@ namespace Core.Common.Interfaces
         Task Add(TEntity entity);
         Task Update(TEntity entity);
         Task Delete(TEntity entity);
-        Task Delete(TKey key);;
+        Task Delete(TKey key);
     }
 }
