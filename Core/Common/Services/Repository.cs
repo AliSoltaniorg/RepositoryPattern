@@ -1,5 +1,6 @@
 ﻿using Core.Common.Interfaces;
 using Data.Context;
+using Data.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,8 +12,8 @@ namespace Core.Common.Services
     public class Repository<TEntity, TKey> : IRepository<TEntity, TKey>, IBaseRepository<TEntity, TKey> where TEntity : class
     {
         private DbSet<TEntity> _dbSet;
-        private PatternDbContext _context;
-        public Repository(PatternDbContext context)
+        private IPatternDbContext _context;
+        public Repository(IPatternDbContext context)
         {
             _context = context;
             _dbSet = _context.Set<TEntity>(); 

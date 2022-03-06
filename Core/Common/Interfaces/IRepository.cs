@@ -1,6 +1,6 @@
 ﻿namespace Core.Common.Interfaces
 {
-    public interface IRepository<TEntity, TKey>
+    public interface IRepository<TEntity, TKey>:IBaseRepository<TEntity, TKey>
     {
         void Add(TEntity entity);
 
